@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="noindex">
+<title>Connecting X · Shorts Poster</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <h1>Connecting X…</h1>
+  <p>Passing the sign-in back to Shorts Poster on this computer.</p>
+  <p class="muted">If nothing happens, <a id="go" href="#">click here</a>. The sign-in code only works together with
+     a key that never leaves the owner's computer, and it expires after 30 seconds.</p>
+</main>
+<script>
+  // X only accepts an https callback, so it lands here and goes straight on to `publish auth x` on this PC.
+  const target = "http://127.0.0.1:8768/callback/" + location.search;
+  document.getElementById("go").href = target;
+  if (location.search) location.replace(target);
+</script>
+</body>
+</html>
